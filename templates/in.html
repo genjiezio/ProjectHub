@@ -1,0 +1,13 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <h1>欢迎登录：{{ username }},{{ request.session.username }}</h1>
+    <a href="http://127.0.0.1:8000/logout/"><input type="button" value="注销"/></a>
+    <form action="/padmin_api/test" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit" />
+</form>
+</body>
+</html>

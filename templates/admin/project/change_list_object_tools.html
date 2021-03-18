@@ -1,0 +1,33 @@
+{% extends 'admin/change_list_object_tools.html' %}
+{% load i18n admin_urls %}
+{% block object-tools-items %}
+{% if has_add_permission %}
+
+{% if cl.opts.verbose_name == 'course'%}
+<li>
+    <a href="import_courses/" class="addlink">
+        Import CSV
+    </a>
+</li>
+{% elif cl.opts.verbose_name == 'student_ course'%}
+<li>
+    <a href="import_student_courses/" class="addlink">
+        Import CSV
+    </a>
+</li>
+{% elif cl.opts.verbose_name == 'teacher_ course'%}
+<li>
+    <a href="import_teacher_courses/" class="addlink">
+        Import CSV
+    </a>
+</li>
+{% endif %}
+
+<li>
+    {% url cl.opts|admin_urlname:'add' as add_url %}
+    <a href="{% add_preserved_filters add_url is_popup to_field %}" class="addlink">
+        {% blocktranslate with cl.opts.verbose_name as name %}Add {{ name }}{% endblocktranslate %}
+    </a>
+</li>
+{% endif %}
+{% endblock %}
