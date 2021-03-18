@@ -1,0 +1,23 @@
+<!--pages/mine/mine.wxml-->
+
+<image src="../../images/mine_background.png" mode="widthFix" class="backImg" style="width:100%;" />
+
+
+<text>\n\n</text>
+
+
+<view class="userInfo">
+  <view wx:if="{{!show}}" class="Login">
+    <navigator class="weui-flex__item" url="./log/log" class="item-link">登录 </navigator>
+    <view><text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</text></view>
+    <navigator class="weui-flex__item" url="./register/register" class="item-link">注册</navigator>
+  </view>
+
+  <view wx:else>
+    <text>\n\n</text>
+    <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+    <text>\n\n</text>
+    <view class="text-black text-xl">{{userInfo.nickName}}</view>
+    <view class="text-black text-xl">{{account}}</view>
+  </view>
+</view>

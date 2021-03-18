@@ -1,0 +1,36 @@
+<!--pages/message/message.wxml-->
+
+<view class="page" >
+	<view class="page__hd">
+		<view class="page__title">Project Message</view>
+		<view class="page__desc">项目新信息</view>
+	</view>
+	<view wx:for="{{messageList}}" class="page__bd card" wx:key="item">
+		<view class="weui-form-preview">
+			<view class="weui-form-preview__hd">
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">项目名称</label>
+					<em class="weui-form-preview__value">{{item.project_name}}</em>
+				</view>
+			</view>
+			<view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">课程</label>
+					<text class="weui-form-preview__value">{{item.project_class}}</text>
+				</view>
+				<view class="weui-form-preview__item">
+					<label class="weui-form-preview__label">消息</label>
+					<text class="weui-form-preview__value">
+						{{item.project_message}}
+					</text>
+				</view>
+
+			</view>
+			<view class="weui-form-preview__ft">
+        <button id="{{index}}" bindtap="detail" class="weui-form-preview__btn weui-form-preview__btn_primary" >详情</button> 
+				<button id="{{index}}" bindtap="delete" class="weui-form-preview__btn weui-form-preview__btn_primary" >标为已读</button> 
+			</view>
+      
+		</view>
+	</view>
+	</view>

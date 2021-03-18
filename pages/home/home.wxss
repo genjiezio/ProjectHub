@@ -1,0 +1,5 @@
+/* pages/home/home.wxss */
+.page__title{
+  font-size:25px;
+  font-weight:1000;
+}

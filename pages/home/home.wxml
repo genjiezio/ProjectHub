@@ -1,0 +1,14 @@
+<!--pages/home/home.wxml-->
+<view class="page__hd">
+  <view class="page__title">Project</view>
+  <view class="page__desc">项目</view>
+</view>
+
+
+<view wx:for="{{courseList}}" wx:key="item">
+  <van-cell-group title="{{item.course_name}}">
+    <view wx:for="{{item.course_project}}" wx:key="item">
+      <van-cell is-link title="{{item.project_name}}" id="{{item.project_id}}" bind:click="onClick" />
+    </view>
+  </van-cell-group>
+</view>

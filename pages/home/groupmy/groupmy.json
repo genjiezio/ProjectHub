@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-skeleton": "../../../module/vant/skeleton/index",
+    "van-sidebar": "../../../module/vant/sidebar/index",
+    "van-sidebar-item": "../../../module/vant/sidebar-item/index",
+    "van-notify": "../../../module/vant/notify/index"
+  }
+}

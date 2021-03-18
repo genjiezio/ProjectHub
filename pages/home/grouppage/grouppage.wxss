@@ -1,0 +1,11 @@
+/* pages/home/grouppage/grouppage.wxss */
+.page__title{
+  font-size:25px;
+  font-weight:1000;
+}
+.page__desc{
+  color: gray;
+}
+.card{
+  margin: 100rpx 30rpx 25rpx 30rpx !important;
+}

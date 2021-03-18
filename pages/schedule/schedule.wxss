@@ -1,0 +1,4 @@
+/* pages/schedule/schedule.wxss */
+.calendar {
+  --calendar-height: 500px;
+}

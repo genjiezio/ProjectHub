@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "van-calendar": "../../module/vant/calendar/index"
+  }
+}

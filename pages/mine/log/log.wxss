@@ -1,0 +1,6 @@
+/* miniprogram/pages/home/log/log.wxss */
+
+button{
+  background-color:rgb(15, 201, 15);
+  color: white;
+}

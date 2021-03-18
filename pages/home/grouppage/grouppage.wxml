@@ -1,0 +1,35 @@
+<!--pages/home/grouppage/grouppage.wxml-->
+<view class="page">
+  <view class="page__hd">
+    <view class="page__title">Group Message</view>
+    <view class="page__desc">组队信息</view>
+  </view>
+  <view wx:for="{{groupList}}" class="page__bd card" wx:key="item">
+    <view class="weui-form-preview">
+      <view class="weui-form-preview__hd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">队伍名称</label>
+          <em class="weui-form-preview__value">{{item.group_name}}</em>
+        </view>
+      </view>
+      <view class="weui-form-preview__bd">
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">成员</label>
+          <text class="weui-form-preview__value"> {{item.group_member}} </text>
+        </view>
+        <view class="weui-form-preview__item">
+          <label class="weui-form-preview__label">简介</label>
+          <text class="weui-form-preview__value">
+            {{item.group_info}}
+          </text>
+        </view>
+
+      </view>
+      <view class="weui-form-preview__ft">
+        <button id="{{index}}" bindtap="detail"
+          class="weui-form-preview__btn weui-form-preview__btn_primary">加入</button>
+      </view>
+
+    </view>
+  </view>
+</view>

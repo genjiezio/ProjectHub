@@ -1,0 +1,5 @@
+/* pages/mine/register/register.wxss */
+button{
+  background-color:rgb(15, 201, 15);
+  color: white;
+}

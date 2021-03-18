@@ -1,0 +1,16 @@
+<!--pages/mine/register/register.wxml-->
+
+<van-cell-group>
+  <van-field value="{{ account }}" required clearable label="用户名" placeholder="请输入用户名"  bind:change="accountInput"/>
+  <van-field value="{{ password }}" type="password" label="密码" placeholder="请输入密码" required bind:change="passwordInput" border="{{ false }}" />
+  <van-field value="{{ email }}" required clearable label="邮箱" placeholder="请输入邮箱" bind:change="emailInput" />
+  
+  <van-field value="{{ code }}" center clearable label="邮箱验证码" placeholder="请输入邮箱验证码" bind:change="codeInput" border="{{ false }}"
+    use-button-slot>
+    <van-button disabled="{{disabled}}" slot="button" size="small" type="primary" bind:click="send">{{label}}</van-button>
+  </van-field>
+
+  <text>\n\n</text>
+</van-cell-group>
+
+<button bindtap="log_user" open-type="getUserInfo" bindtap="register">注册</button>

@@ -1,0 +1,42 @@
+<!--pages/home/groupmy/groupmy.wxml-->
+<wxs module="filter" src="./groupmy.wxs"></wxs>
+<view class="page__hd">
+  <view class="page__title"><text space="nbsp"> Project</text></view>
+  <view class="page__desc"><text space="nbsp">      项目</text></view>
+</view>
+<text>\n</text>
+<van-row>
+  <van-col span="8">
+    <van-sidebar active-key="{{ activeKey }}" bind:change="onChange">
+      <van-sidebar-item title="项目简介" />
+      <van-sidebar-item title="小组信息" />
+      <van-sidebar-item title="项目通知" />
+      <van-sidebar-item title="项目成绩" />
+    </van-sidebar>
+  </van-col>
+
+  <van-col span="16">
+    <view wx:if="{{activeKey==0}}">
+      <span >项目名称：{{ projectName }}</span>
+      <text>\n</text>
+      <span >项目课程：{{ className }}</span>
+      <text>\n</text>
+      <span >项目实验课：{{ labName }}</span>
+      <text>\n</text>
+      <span>{{findLeader()}}</span>
+      <span >组长姓名：{{ filter.getLeaderName(members,leaderId) }}</span>
+    </view>
+    <view wx:elif="{{activeKey==1}}">
+      <text>kkk</text>
+    </view>
+    <view wx:elif="{{activeKey==2}}">
+      <text>ppk</text>
+    </view>
+    <view wx:elif="{{activeKey==3}}">
+      <text>sssk</text>
+    </view>
+  </van-col>
+</van-row>
+
+
+<van-notify id="van-notify" />

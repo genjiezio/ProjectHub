@@ -1,0 +1,16 @@
+var filter ={
+  getLeaderName: function(members,leaderId){
+    if(members){
+      var i=0
+      for (i= 0; i < members.length; i++) {
+        if(parseInt(members[i].studentId) === leaderId){
+          return members[i].name
+        }
+      }
+    }
+  }
+}
+
+module.exports = {
+  getLeaderName: filter.getLeaderName
+}
